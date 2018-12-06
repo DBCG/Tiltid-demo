@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<library xmlns:bop="www.alphora.com/schemas/bop" assembliesasstring="" defaultdevicename="TILTidDevice" generatorid="-1" isgenerated="False" isremotable="True" issystem="False" librariesasstring="" name="TILTidMain" settings="" version="*" xmlns="Alphora.Dataphor.DAE.Schema,Alphora.Dataphor.DAE">
+	<libraries.libraryreference name="Frontend" version="*" />
+	<libraries.libraryreference name="SQLDevice" version="*" />
+	<libraries.libraryreference name="PGSQLDevice" version="*" />
+</library>

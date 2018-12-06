@@ -1,0 +1,19 @@
+create device TILTidDevice
+	reconciliation { mode = { command }, master = server } // both } // device }
+	class "PostgreSQLDevice"
+		attributes
+		{
+//			,"UseIntegratedSecurity" = "False"
+			"Server" = "postgres"	// Byt vid behov till rätt namn
+   		,"Port" = "5432"
+         ,"Database" = "postgres"
+//			, "ShouldEnsureDatabase" = "False"
+//			, "CommandTimeout" = "2000"	// En timeout på 2000 sekunder istället för 30 som är default
+		};
+		
+CreateDeviceUser("System", "TILTidDevice", "postgres", "");
+CreateDeviceUser("Admin", "TILTidDevice", "postgres", "");
+
+SetDefaultDeviceName("TILTidDevice");
+
+create table Data { ID : Integer, key { ID } }
